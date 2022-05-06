@@ -1,83 +1,69 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div class="container">
-      <header class="header">
-        <h1 id="title" class="text-center">
-          GeeksforGeeks Survey
-        </h1>
-      </header>
-      <p id="description" class="description text-center">
-        Thank you for taking time and filling out the form!
-      </p>
+<html lang="en">
 
-    <form id="survey-form">
-      <div class="form-group">
-        <label for="name" id="name-label">Name</label>
-        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- <center> -->
+  <div class="form-container">
+    <header class="header">
+      <h1 id="title">Developers Survey Form </h1>
+      <p id="description">Thank you for taking the time to help us know the about world wide developers </p>
+    </header>
+    <form id="survey-form" autocomplete="off">
+
+      <div class="group">
+        <label for="name" id="name-label">Name :-</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
       </div>
-      <div class="form-group">
-        <label for="email" id="email-label">Email</label>
-        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+      <div class="group">
+        <label for="email" id="email-label">Email :-</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
       </div>
-      <div class="form-group">
-        <label for="number" id="number-label"> Age <span class="clue"> (optional) </span></label>
-        <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Enter your Age"/>
+      <div class="group">
+        <label for="number" id="number-label">Age :-</label>
+        <input type="number" id="number" min="10" max="99" placeholder="Age">
       </div>
-      <div class="form-group">
-        <p>Which option best describes your current role?</p>
-        <select id="dropdown" name="role" class="form-control" required>
-          <option disabled selected value >Select current role</option>
-          <option value="student">Student</option>
-          <option value="job">Full-Time Job</option>
-          <option value="learner">Full-Time learner</option>
-          <option value="preferNo">Prefer not to say</option>
-          <option value="other">Other</option>
+
+      <div class="group">
+        <p class="labeltext">Nationality :-</p>
+        <select name="Country" id="dropdown">
+          <option value="India">Indian</option>
+          <option value="USA">American</option>
+          <option value="Australia">Australian</option>
+          <option value="Iran">Iranian</option>
+          <option value="Russia">Russian</option>
+          <option value="Russia">Other</option>
         </select>
       </div>
-      <div class="form-group">
-        <p>
-          Would you recommend GeeksforGeeks to a friend?
-        </p>
-        <label><input type="radio" name="userRecommend" value="definitely" class="input-radio" checked/>Definitely</label>
-        <label><input type="radio" name="userRecommend" value="maybe" class="input-radio" checked/>Maybe</label>
-        <label><input type="radio" name="userRecommend" value="not-sure" class="input-radio" checked/>Not Sure</label>
+      <div class="group">
+        <p class="labeltext labeltextresponse">Developer :-</p>
+        <label><input type="radio" name="Role" value="Male">Frontend</label>
+        <label><input type="radio" name="Role" value="Female">Backend</label>
+        <label><input type="radio" name="Role" value="Both">Fullstack</label>
       </div>
-      <div class="form-group">
-        <p>What is you favourite feature of GeeksforGeeks?</p>
-        <select id="most-like" class="form-control" name="mostLike" required>
-          <option disabled selected value>Select an option</option>
-          <option value="challenges">Challenges</option>
-          <option value="projects">Projects</option>
-          <option value="support">Support</option>
-        </select>
+      <div class="group">
+        <p class="labeltext labeltextresponse">Qualification :-</p>
+        <label><input type="checkbox" name="Role2" value="10+2">10+2</label>
+        <label><input type="checkbox" name="Role2" value="Graduation">Graduation</label>
+        <label><input type="checkbox" name="Role2" value="Degree">Degree</label>
       </div>
-      <div class="form-group">
-        <p>What would you like to see improved or added?
-          <span class="clue">(Check all that apply)</span>
-        </p>
-        <label><input type="checkbox" name="prefer" value="challenges" class="input-checkbox"/>Challenges</label>
-        <label><input type="checkbox" name="prefer" value="tutorials" class="input-checkbox"/>Tutorials</label>
-        <label><input type="checkbox" name="prefer" value="videos" class="input-checkbox"/>Videos</label>
-        <label><input type="checkbox" name="prefer" value="project-videos" class="input-checkbox"/>Project Videos</label>
-        <label><input type="checkbox" name="prefer" value="often-upload-videos" class="input-checkbox"/>Often Upload Videos</label>
+      <div class="group">
+        <p class="labeltext">Describe about you :-</p>
+        <textarea id="comments" name="comments"> </textarea>
       </div>
-      <div class="form-group">
-        <p>Any comments or suggestions?
-        <span class="clue">(favourite programming language)</span>
-        </p>
-        <textarea name="comment" id="comments" class="input-textarea form-control" placeholder="Enter your comment here..."></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" id="submit" class="submit-button">Submit</button>
+      <div class="group">
+        <button type="submit" id="submit">Submit</button>
       </div>
     </form>
   </div>
-  </body>
+  <!-- </center> -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
 </html>
